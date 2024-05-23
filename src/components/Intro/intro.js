@@ -7,9 +7,9 @@ const Intro = () => {
     <section id='intro'>
       <div className='introContent'>
         <span className='introText'>NISHCHAY PATEL</span>
-        <span className='Title'>Full Stack Software Engineer</span>
+        <span className='Title'>Full Stack Software Engineer <br></br></span>
         <br/>
-        <p className='introPara'> I have extensive experience in Software Development, Machine Learning, and Data Science, gained through internships, on-campus research, and various projects.</p>
+        <p className='introPara'> Bachelors of Science in Computer Science <br></br> Certification in Data Science. <br></br> <strong>Georgia State University</strong></p>
       </div>
       <img src={bg} alt="Profile" className='bg'/>
     </section>
