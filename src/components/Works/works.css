@@ -1,0 +1,45 @@
+#works{
+    min-height: cal(100vh-4rem);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+
+.worksTitle{
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.worksDesc{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.worksImgs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 65rem;
+}
+
+.worksImg{
+    object-fit: cover;
+    height: 20rem;
+    margin: 0.5rem;
+}
+
+.btn{
+    padding: 0.5rem 2.5rem;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 1 1rem;
+    border-radius: 2rem;
+}
