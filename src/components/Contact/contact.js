@@ -33,8 +33,8 @@ const Contact = () => {
             <h1 className='contactTitle'>Contact Form</h1>
             <span className='contactDesc'> Please fill out the following to connect or click the social media options </span>
             <form className='contactForm' ref={form} onSubmit={sendEmail}>
-                <input type='text' className='name' placeholder='Your Name' name='your_name'/>
-                <input type='email' className='email' placeholder='Email' name='your_email'/>
+                <input type='text' className='name' placeholder='Your Name' name='from_name'/>
+                <input type='email' className='email' placeholder='Email' name='from_email'/>
                 <textarea className='msg' name='message' row='5' placeholder='Your Message'></textarea>
                 <button type='submit' value='Send' className='btn' onClick={handleClick}> Submit </button>
                 <div className='links'>
