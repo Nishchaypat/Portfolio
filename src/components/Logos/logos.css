@@ -1,0 +1,54 @@
+.title{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.logos-section {
+    text-align: center;
+    padding: 50px;
+    background-color: rgb(28, 28, 28);
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logos-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logos-category {
+    margin-bottom: 40px;
+}
+
+.logos-category h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.logo-item {
+    width: 50px; /* Specify the desired width */
+    height: 50px; /* Specify the desired height */
+    display: inline-block; /* Ensures the items are inline */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.logo-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.devicon {
+    font-size: 48px; /* Adjust size as needed */
+}

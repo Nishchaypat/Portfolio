@@ -1,6 +1,6 @@
 import React from 'react'
 import './intro.css'
-import bg from '../../assets/myimage.jpg'
+import bg from '../../assets/myimage.png'
 
 const Intro = () => {
   return (
