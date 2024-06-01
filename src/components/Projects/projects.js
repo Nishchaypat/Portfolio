@@ -65,7 +65,7 @@ const Projects = () => {
           <li><strong>Tech Stack:</strong> Python, Django, Firebase Services, Google Generative AI API, HTML, CSS, TypeScript </li>
           </ul>
           <br></br>
-          <a href='https://github.com/Nishchaypat/Career-Swipe' target='_blank' rel='noopener noreferrer'> Github </a>
+          <a href='https://github.com/Nishchaypat/Career-Swipe-Backend' target='_blank' rel='noopener noreferrer'> Github </a>
           </p>
           </div>
         )})} />
@@ -81,7 +81,7 @@ const Projects = () => {
           <li><strong>Tech Stack:</strong> Python, Swift </li>
           </ul>
           <br></br>
-          <a href='https://github.com/Nishchaypat/Premier_League_Prediction' target='_blank' rel='noopener noreferrer'> Github </a>
+          <a href='https://github.com/Nishchaypat/Premier-League-Prediction-Backend' target='_blank' rel='noopener noreferrer'> Github </a>
           </p>
           </div>
         )})} />
@@ -97,7 +97,7 @@ const Projects = () => {
           <li><strong>Tech Stack:</strong> Python, OpenAI API, HTML, CSS, JavaScript </li>
           </ul>
           <br></br>
-          <a href='https://github.com/Nishchaypat/Movie-Quote-Search' target='_blank' rel='noopener noreferrer'> Github </a>
+          <a href='https://github.com/Nishchaypat/Movie-Quote-Search-Backend' target='_blank' rel='noopener noreferrer'> Github </a>
           </p>
           </div>
         )})} />      
