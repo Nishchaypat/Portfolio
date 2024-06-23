@@ -1,44 +1,133 @@
 .intro {
-    height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 75rem;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
+  height: calc(100vh - 5rem); /* Adjusted for navbar height */
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(30, 30, 30); /* Adjusted text color */
+  padding: 2rem;
 }
 
-.bg{
-    position: absolute;
-    top: -10rem;
-    z-index: -1;
-    right: 2rem;
-    height: 120vh;
-    width: 120vh;
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  max-width: 50%; /* Adjusted to fit content better */
+  z-index: -1;
+  filter: brightness(0.7); /* Darken background image */
 }
 
-.introContent{
-    height: 90vh;
-    width: 100vh;
-    padding: 2rem;
-    font-size: 3rem;
-    font-weight: 700;
-    display: flex;
+.introContent {
+  max-width: 50%;
+}
+
+/* Circular ring animation for all text elements */
+.introText,
+.introTitle,
+.introPara {
+  position: relative; /* Ensure relative positioning for pseudo-element */
+  display: inline-block; /* Ensure inline-block for pseudo-element positioning */
+  cursor: pointer; /* Add cursor pointer for interactive feedback */
+}
+
+.introText::before
+{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: 2px solid #64b5f6; /* Adjust border color and width */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 2.3s ease;
+}
+
+.introText:hover::before {
+  width: 110%; /* Adjust the size of the ring */
+  height: 100%; /* Adjust the size of the ring */
+}
+
+
+.introTitle::before,
+.introPara::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: 2px solid #64b5f6; /* Adjust border color and width */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 2.3s ease;
+}
+
+.introTitle:hover::before,
+.introPara:hover::before {
+  width: 120%; /* Adjust the size of the ring */
+  height: 135%; /* Adjust the size of the ring */
+}
+
+.introText {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.introTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.introPara {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.introButtonContainer {
+  margin-top: 2rem;
+}
+
+.introButton {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.introButton:hover {
+  background-color: #1565c0;
+}
+
+@media (max-width: 768px) {
+  .intro {
     flex-direction: column;
-    justify-content: center;
-}
+  }
 
-.introText{
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: rgb(90, 192, 233);
-}
+  .bg {
+    max-width: 100%;
+  }
 
-.introPara{
-    font-size: 1.5rem;
-    font-weight: 200;
-    color: white
-}
-
-.Title{
-    font-size: 2.2rem;
+  .introContent {
+    max-width: 100%;
+  }
 }

@@ -1,5 +1,18 @@
-#contact{
-    min-height: cal(100vh-4rem);
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Contact section styles */
+#contact {
+    min-height: calc(100vh - 4rem);
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -7,20 +20,25 @@
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
+    padding-top: 50px; /* Added padding top for better spacing */
+    position: relative; /* Required for absolute positioning of pseudo-element */
+    overflow: hidden; /* Hide any overflow to contain the ribbon animation */
 }
 
-.contactPageTitle{
+.contactPageTitle {
     margin: 1rem 0;
     font-size: 3rem;
+    font-weight: 600; /* Increased font weight for better readability */
 }
 
-.contactDesc{
+.contactDesc {
     padding: 1rem;
-    font-size: medium;
+    font-size: 1.2rem; /* Adjusted font size for better legibility */
     font-weight: 300;
+    margin-bottom: 2rem; /* Added margin bottom for separation */
 }
 
-.contactForm{
+.contactForm {
     margin: 1rem;
     display: flex;
     flex-direction: column;
@@ -28,36 +46,107 @@
     justify-content: center;
     width: 90vw;
     max-width: 60rem;
+    position: relative; /* Ensure the form container is positioned relative */
+    overflow: hidden; /* Hide any overflow to contain the ribbon animation */
 }
 
-.name, .email, .msg{
-    font-size: medium;
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Make the width wider to ensure it covers the entire form */
+    height: 100%;
+    background: linear-gradient(to right, transparent, #64b5f6, transparent); /* Gradient simulating ribbon */
+    pointer-events: none; /* Ensures the hover effect is not disrupted */
+    transform: translateX(-100%); /* Initially position off-screen */
+    animation: ribbon 8s linear infinite; /* Animation for ribbon effect */
+}
+
+@keyframes ribbon {
+    0% {
+        transform: translateX(-100%); /* Start off-screen left */
+    }
+    100% {
+        transform: translateX(100%); /* Move across to off-screen right */
+    }
+}
+
+.name,
+.email,
+.msg {
+    font-size: 1rem; /* Adjusted font size */
     width: 100%;
     max-width: 40rem;
     margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: white;
+    padding: 0.75rem 1rem; /* Increased padding for better input field appearance */
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 0.5rem;
-    background: rgb(40,40,40);
+    background: rgb(255, 255, 255);
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition for smoother hover effect */
 }
 
-.btn{
+.name:hover,
+.email:hover,
+.msg:hover {
+    background-color: #64b5f6; /* Darken background color on hover */
+    transform: translateY(-3px); /* Lift up slightly on hover */
+}
+
+.btn {
     background: white;
     border: none;
     border-radius: 0.5rem;
     margin: 2rem;
     padding: 0.75rem 3.5rem;
+    font-size: 1rem; /* Adjusted font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition for smoother hover effect */
 }
 
-.links{
+.btn:hover {
+    background-color: #eeeeee; /* Lighten background color on hover */
+    transform: translateY(-3px); /* Lift up slightly on hover */
+}
+
+.links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Center align links */
+    margin-top: 2rem; /* Added margin top for spacing */
 }
 
-.link{
-    object-fit: cover;
-    height: 3rem;
+.link {
+    position: relative;
     width: 3rem;
+    height: 3rem;
     margin: 0 0.75rem;
+    overflow: hidden;
+    border-radius: 50%; /* Ensure circular shape for links */
+}
+
+.link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover entire area */
+    transition: transform 0.3s ease; /* Added transition for smoother hover effect */
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border: 2px solid rgba(0, 0, 0, 0); /* Start with transparent border */
+    border-radius: 50%;
+    transition: border-color 0.3s ease;
+    z-index: -1;
+}
+
+.link:hover::before {
+    border-color: rgba(0, 0, 0, 0.5); /* Darker border color on hover */
 }
